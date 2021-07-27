@@ -10,7 +10,7 @@ var all = [original, new1, new2];
 
 var random = Math.floor(Math.random * all.length);
 
-fs.writeFile('index.html', new2, function(err) {
+fs.writeFile('index.html', 'new2', function(err) {
     if (err) throw err;
     console.log('Done!!!');
 });
