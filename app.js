@@ -1,16 +1,12 @@
-// jshint esversion:6
+//jshint esversion:6
+const http = require('http');
 
-const fs = require('fs');
-
-var original = `Oh Henlo there fren!`;
-var new1 = `henleo`;
-var new2 = `soup`;
-
-var all = [original, new1, new2];
-
-var random = Math.floor(Math.random * all.length);
-
-fs.writeFile('index.html', 'new2', function(err) {
-    if (err) throw err;
-    console.log('Done!!!');
-});
+// create a server
+http.createServer(function(request, response) {
+    console.log('bro check 3000');
+    response.writeHead(200, {'Content-Type': 'text/html'});
+    response.write(`
+    new2
+    `);
+    response.end();
+}).listen(3000);
