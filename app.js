@@ -1,5 +1,6 @@
 //jshint esversion:6
 const http = require('http');
+var port = process.env.PORT || 8080;
 
 // create a server
 http.createServer(function(request, response) {
@@ -9,4 +10,4 @@ http.createServer(function(request, response) {
     new2
     `);
     response.end();
-}).listen(3000);
+}).listen(port);
